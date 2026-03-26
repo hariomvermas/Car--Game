@@ -1,70 +1,24 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background: #1a1a2e;
-    color: #eee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    gap: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
 }
 
 h1 {
-    font-size: 1.8rem;
-    color: #e94560;
+    color: #333;
 }
 
-#info {
-    display: flex;
-    gap: 30px;
-    font-size: 1rem;
-    background: #16213e;
-    padding: 10px 24px;
-    border-radius: 8px;
-}
-
-#grid {
-    display: grid;
-    grid-template-columns: repeat(5, 80px);
-    grid-template-rows: repeat(5, 80px);
-    gap: 4px;
-}
-
-.cell {
-    width: 80px;
-    height: 80px;
-    background: #16213e;
-    border: 2px solid #0f3460;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    transition: background 0.2s;
-}
-
-.cell.taxi       { background: #e94560; }
-.cell.passenger  { background: #f5a623; }
-.cell.destination{ background: #4caf50; }
-.cell.taxi.passenger   { background: #9b59b6; }
-.cell.taxi.destination { background: #2ecc71; }
-
-#run-btn {
-    padding: 12px 36px;
-    font-size: 1rem;
-    background: #e94560;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
+button {
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background 0.2s;
 }
 
-#run-btn:hover  { background: #c0392b; }
-#run-btn:disabled { background: #555; cursor: not-allowed; }
+pre {
+    text-align: left;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+}

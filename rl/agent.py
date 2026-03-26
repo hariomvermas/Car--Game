@@ -16,7 +16,7 @@ class QAgent:
     
     def choose_action(self, state):
         if random.random() < self.epsilon:
-            return random.random(0,5)
+            return random.randint(0, 5)
         return np.argmax(self.get_q(state))
 
     def update(self, state , action, reward, next_state):
@@ -30,5 +30,8 @@ class QAgent:
             pickle.dump(self.q_table, f)
 
     def load(self):
+        import os
+        if not os.path.exists("q_table.pkl"):
+            return
         with open("q_table.pkl","rb") as f:
             self.q_table = pickle.load(f)

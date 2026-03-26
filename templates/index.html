@@ -2,22 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Taxi RL Agent</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RL Taxi Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Taxi RL Agent Visualizer</h1>
+    <h1>RL Taxi Simulator</h1>
 
-    <div id="info">
-        <span>Step: <b id="step-count">0</b></span>
-        <span>Reward: <b id="reward">0</b></span>
-        <span>Action: <b id="action-name">-</b></span>
-    </div>
+    <button onclick="runAgent()">Run Agent</button>
 
-    <div id="grid"></div>
+    <pre id="output"></pre>
 
-    <button id="run-btn" onclick="runAgent()">Run Agent</button>
-
-    <script src="/static/script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
